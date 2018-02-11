@@ -4,10 +4,18 @@ using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
-
-
-[AddComponentMenu("ESComponent/MenuTest")]  // 添加Component菜单项[DisallowMultipleComponent]            // 不允许重复添加该组件[RequireComponent(typeof(Rigidbody))]  // 自动添加其他Componentpublic class MenuTest : MonoBehaviour
-{    public string pname;    public int age;    // 在Component右侧下来菜单中显示    [ContextMenu("OutputInfo")]      void OutputInfo()    {        print(pname + "|" + age);    }
+/*
+ * 这个脚本演示了菜单项扩展的基本用法，包括
+ * 1：组件菜单项的添加，以及设置该组件不能重复添加，添加该组件时自动添加依赖组件，自定义文档链接。
+ * 2：ContexMenu和ContextMenuItem的用法。
+ * 3：MenuItem的普通用法，以及Menu快捷键添加。
+ * 4：MenuItem的特殊用法，包括在Assets菜单中添加（其实和普通的差不多，只是Assets是一个特殊的菜单目录），以及在其他Component上添加菜单。
+ */
+[AddComponentMenu("ESComponent/MenuTest")]  // 添加Component菜单项[DisallowMultipleComponent]                 // 不允许重复添加该组件[RequireComponent(typeof(Rigidbody))]       // 自动添加其他Component
+[HelpURL("http://www.baidu.com")]           // 提供一个自定义文档链接，点击组件上的文档图标即可打开你指定的连接public class MenuTest : MonoBehaviour
+{
+    /*     * ContextMenu()属性允许添加一个命令到该组件上，你可以通过右键或者点击设置图标来调用到它（一般用于函数），且是在非运行状态下执行该函数;      * ContextMenuItem()属性允许添加一个命令到该变量上，可通过右击变量显示出菜单来调用对应方法     */
+    [ContextMenuItem("右击时显示", "OutputInfo")]    public string pname = "Lilei";    public int age = 10;    // 在Component右侧下来菜单中显示    [ContextMenu("OutputInfo")]      void OutputInfo()    {        print(pname + "|" + age);    }
 
 #if UNITY_EDITOR
     /*
