@@ -294,6 +294,10 @@
     <Compile Include="Assets\Samples\Attribute\Editor\IngredientDrawer.cs" />
     <Compile Include="Assets\Samples\Attribute\Editor\MyRangeAttributeDrawer.cs" />
     <Compile Include="Assets\Samples\Attribute\Editor\ReadOnlyAttributeDrawer.cs" />
+    <Compile Include="Assets\Samples\EditorWindow\Editor\MyWindow.cs" />
+    <Compile Include="Assets\Samples\EditorWindow\Editor\ScreenshotWindow.cs" />
+    <Compile Include="Assets\Samples\EditorWindow\Editor\ScriptviewWindow.cs" />
+    <Compile Include="Assets\Samples\InspectorEditor\Editor\LookAtPointEditor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
