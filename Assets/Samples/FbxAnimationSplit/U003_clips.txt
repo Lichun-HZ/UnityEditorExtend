@@ -1,0 +1,5 @@
+﻿gStand,1f,11f,1
+gWalk,12f,21f,1
+gStand-1,22f,31f,1
+gWalk-1,32f,41f,1
+Attack,42f,51f,0

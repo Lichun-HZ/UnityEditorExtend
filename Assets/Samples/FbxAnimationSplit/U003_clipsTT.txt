@@ -1,0 +1,15 @@
+attack_a,285,328,0
+attack_crit,331,374,0
+backtown(stand),980,1220,1
+death,785,887,0
+fidget_a,540,782,1
+fidget_ride,890,950,1
+spell_b,377,420,0
+spell_c,1442,1465,0
+spell_d,423,509,0
+stand,1471,1531,1
+stand_battle,3,63,1
+stand_intobattle,1534,1585,0
+stand_quitbattle,1588,1645,0
+walk,66,282,1
+walk_ride,1223,1439,1
